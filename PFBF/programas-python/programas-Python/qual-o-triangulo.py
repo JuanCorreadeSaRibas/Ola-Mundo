@@ -13,4 +13,4 @@ if r1 < r2 + r3 and r2 < r1 + r3  and r3 < r1 + r2:
     else:
         print('|ISÓLECELES|')
 else:
-    print('Não pode formar um TRIÂNGULO')
+    print('Não pode formar um TRIÂNGULO.')
