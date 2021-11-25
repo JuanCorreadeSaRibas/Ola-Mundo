@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    margin-left: auto;
+    text-decoration-color: rgb(44, 26, 3);
+}
+
+h1 {
+    color: blanchedalmond;
+    text-align: center;
+}
+
+address {
+    color: chartreuse;
+    text-decoration: underline;
+    text-align: center;
+}
+
+iframe {
+    padding: 0px 0px 0px 450px;
+}
+
+P {
+    text-align: center;
+    color: chocolate;
+}
