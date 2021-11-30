@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/imagem-pequena.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/imagem-media.png" type="image/png">
+        <img src="imagens/imagem-grande.png" alt="Imagem flexivel">
+    </picture>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos reproduzir um audio em HTMl:5.</p>
+    <audio preload="metadata" controls autoplay>
+        <source src="media/How We Like It - Dan Lebowitz.mp3" type="audio/mpeg">
+            <source src="media/How We Like It - Dan Lebowitz.ogg" type="audio/ogg">
+                <source src="media/How We Like It - Dan Lebowitz.mp3" type="audio/wav">
+                    <p>Infelizmente seu navegador não consegue carregar o audio <br><a href="media/How We Like It - Dan Lebowitz.mp3">Clique aqui para acessar o audio</a></p>
+
+    </audio>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruping Tags</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: gray;
+        }
+        header{
+            width:600px;
+            background-color:white;
+            padding:10px;
+            margin: 10px;
+
+        }
+        nav{
+            background-color: rgb(102, 100, 100);
+            padding: 3px;
+            box-shadow: 2px 2px 4px 0.5px rgba(0, 0, 0, 0.418);
+        }
+        nav > a{
+            margin: auto;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+            text-decoration: none;
+
+            
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px;
+            box-shadow: 4px 4px 9px 0px rgb(0, 0, 0, 0.384)
+            
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin:auto;
+            padding:1px;
+            border-width: 5px;
+        }
+        footer > p{
+            margin: 0px;
+        }
+        article > aside{
+            border: 1px solid black;
+            color:black;
+            outline-width: 1px;
+            outline-style: dotted;
+            outline-color: yellow;
+            margin: auto;
+            font-family: Impact, sans-serif; 
+            text-align: center;
+            padding: 2px;           
+        }
+        div#bola{
+            height: 100px;
+            width: 100px;
+            margin: auto;
+            background-color: white;
+            border-radius: 50%;
+            text-align: center;
+            display: unset;
+        }
+        div#bola:hover{
+                display:block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <h1>Meu site</h1>
+            <nav>
+                <a href="https://www.pexels.com/pt-br/">Origem das fotos</a>
+                <a href="https://www.pexels.com/pt-br/">Origem das fotos</a>
+                <a href="https://www.pexels.com/pt-br/">Origem das fotos</a>
+                <a href="https://www.pexels.com/pt-br/">Origem das fotos</a>
+                <a href="https://www.pexels.com/pt-br/">Origem das fotos</a>
+            </nav>
+    </header>
+    <main>
+        <section id = "assuntos">
+
+        </section>
+        <section id = "noticias">
+                <article>
+                    <h2>Noticia do BRASIL</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non dolore incidunt ducimus libero? Repudiandae similique, aliquid molestiae laudantium, voluptatum maxime id quas eaque mollitia natus officiis placeat dolor sed doloremque.</p>
+                        <aside>
+                            <p>Escrito por Juan Correa de Sá Ribas</p>
+                        </aside>
+                </article>
+                <article>
+
+                </article>
+    </main>
+    <footer>
+        <p>Desenvolvido pelo Juan</p>
+        <p><small>Agradeço sua presença aqui no meu site!</small></p>
+    </footer>
+    <div id ='bola'>
+        <p>BOLA</p>
+    </div>
+</body>
+</html>
