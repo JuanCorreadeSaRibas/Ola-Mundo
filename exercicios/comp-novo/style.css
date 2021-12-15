@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Helvetica, monospace, sans-serif;
+
+    background-color: rgb(0, 0, 0);
+    background-image: url(velocidade.jpg);
+    background-size: cover;
+    background-position: bottom right ;
+    background-attachment: fixed;
+}
+
+header{
+    background: white;
+    color: #14809b;
+    padding: 10px;
+    margin: auto;
+    max-width: 800px;
+    min-width: 500px;
+}
+
+main{
+    padding: 15px 20px 8px;
+    background-color: white;
+    font-family: Helvetica, monospace, sans-serif;
+    max-width: 800px;
+    min-width: 500px;
+    
+}
+
+main h2{
+    background-image: linear-gradient(to right, #14809b , transparent);
+    color: rgb(10, 10, 10);
+    font-family:  sans-serif;
+    font-style: normal;
+    
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 5px;
+
+}
+
+main p{
+    line-height: 2em;
+}
+
+footer{
+    background: white;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer a{
+    color: #14809b;
+    font-size: 1em;
+
+    text-decoration: none;
+}
