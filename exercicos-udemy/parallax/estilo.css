@@ -20,7 +20,9 @@
         }
 
         h2{
-            font:1.5em "Lato", sans-serif;
+            font-size: 1.5em;
+            font-family: monospace, sans-serif;
+            text-transform: uppercase;
             color: white;
             background-color: #313131;
             text-transform: uppercase;
