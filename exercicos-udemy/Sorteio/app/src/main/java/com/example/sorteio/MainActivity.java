@@ -1,10 +1,7 @@
-package com.example.primeiroapp;
+package com.example.sorteio;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,12 +11,5 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void alterarTexto(View view){
-
-        TextView texto = findViewById(R.id.bah);
-        texto.setText("Olá, mundo! ah é");
-
-
-    }
-
+    public void(R.id.)
 }
