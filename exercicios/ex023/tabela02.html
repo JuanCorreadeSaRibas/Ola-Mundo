@@ -17,26 +17,36 @@
             border: 1px solid black;
             padding: 10px;
         }
+        
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
 
-        thead{
+        thead, tfoot{
             background-color: rgb(68, 66, 66);
             color: white;
         }
+        
     </style>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     
     <table>
-
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
+                <th scope="col">Estado</th>
             
             
-                <th>População</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
+
+
 
         <tbody>
             <tr>
@@ -92,71 +102,72 @@
             </tr>
             <tr>
                 <td> Amazonas</td>
-                <td></td>
+                <td>4 144 507</td>
             </tr>
             <tr>
                 <td>Espírito Santo</td>
-                <td></td>
+                <td>4 016 650</td>
             </tr>
             <tr>
                 <td> Paraíba</td>
-                <td></td>
+                <td>4 018 127</td>
+            </tr>
+
+            <tr>
+                <td> Rio Grande do Norte</td>
+                <td>3 506 653</td>
             </tr>
             <tr>
                 <td>Mato Grosso</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td> Rio Grande do Norte</td>
-                <td></td>
+                <td>3 484 466</td>
             </tr>
             <tr>
                 <td> Alagoas</td>
-                <td></td>
+                <td>3 337 357</td>
             </tr>
             <tr>
                 <td>Piauí</td>
-                <td></td>
+                <td>3 273 227</td>
             </tr>
             <tr>
                 <td>Distrito Federal</td>
-                <td></td>
+                <td>3 015 266</td>
             </tr>
             <tr>
                 <td> Mato Grosso do Sul</td>
-                <td></td>
+                <td>2776 966</td>
             </tr>
             <tr>
                 <td> Sergipe</td>
-                <td></td>
+                <td>2 296.696</td>
             </tr>
             <tr>
                 <td>Rondônia</td>
-                <td></td>
+                <td>1 777.225</td>
             </tr>
             <tr>
                 <td>Tocantins</td>
-                <td></td>
+                <td>1 572.666</td>
             </tr>
             <tr>
                 <td> Acre</td>
-                <td></td>
+                <td> 881.955</td>
             </tr>
             <tr>
                 <td>Amapá</td>
-                <td></td>
+                <td>875.731</td>
             </tr>
             <tr>
                 <td>Roraima</td>
-                <td>652 713</td>
+                <td>652.713</td>
             </tr>
 
         </tbody>
 
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td>0000</td>
+                <th scope="row">Total de Habitantes</th>
+                <td>210.147.125</td>
             </tr>
         </tfoot>
 
