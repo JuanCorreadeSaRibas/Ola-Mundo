@@ -19,14 +19,14 @@
     mb -> Margin Bottom
     ml -> Margin Left
     mr -> Margin Right
-    mx -> Margin no eixo x (horizontal) esquerda/direita
+    mx -> Margin no eixo x (horizontal) left/right
     my -> Margin no eixo y (vertical) top/bottom
     m  -> Margin em todos os lados
     Valor a definir (0 até 5)
     -->
-    <h1 class="bg-success">Margin</h1>
-    <p class="bg-success">Conteúdo principal</p>
-    <h1 class="bg-success">Margin</h1>
+    <h1 class="bg-success" style="margin: 0;">Margin</h1>
+    <p class="bg-success mt-1">Conteúdo principal</p>
+    <h1 class="bg-success my-5 mx-3">Margin</h1>
 
     <br>
     <br>
@@ -42,8 +42,8 @@
     Valor a definir (0 até 5)
     -->
     <h1 class="bg-success">Padding</h1>
-    <p class="bg-success">Conteúdo principal</p>
-    <h1 class="bg-success">Padding</h1>
+    <p class="bg-success p-3 text-dark-50">Conteúdo principal</p>
+    <h1 class="bg-success p-5 text-light">Padding</h1>
 
     <br>
     <br>
