@@ -1,0 +1,25 @@
+/*
+* 
+* @author Jamilton Damasceno
+*/
+
+body{
+    background: url(../imagens/capa.png),
+                url(../imagens/ruido.png),
+                linear-gradient(50deg, #ff4169, #7c26f8);
+                background-attachment: fixed;
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 0px;
+}
+
+.navbar-nav .nav-link{
+    color: red;
+}
+
+.Sobre h2{
+    color: hsl(265, 94%, 56%);
+}
+#bah{color: rgb(248, 38, 38);}
