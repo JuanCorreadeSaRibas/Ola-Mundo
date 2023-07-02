@@ -1,0 +1,3 @@
+onresize = quando a página é redimensionada 
+onscroll = quando o scroll do mouse é acionado
+onload = The browser has finished loading the page

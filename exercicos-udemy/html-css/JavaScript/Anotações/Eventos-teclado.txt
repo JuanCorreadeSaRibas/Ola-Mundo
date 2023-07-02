@@ -1,0 +1,3 @@
+onkeydown = executado no momento que qualquer tecla é pressionada
+onkeypress = quando mantem a tecla pressionada
+onkeyup = executado no momento que qualquer tecla para de ser pressionada

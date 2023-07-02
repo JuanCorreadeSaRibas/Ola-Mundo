@@ -1,0 +1,5 @@
+onclick - quando o elemento é clicado
+ondblclick - quando o elemento é clicado duas vezes
+onmouseup - quando o click do elemento é liberado
+onmouseover - quando o cursor do mouse sobrepoem o elemento
+onmouseout - quando o cursor do mouse sai da região da página ocupada pelo elemento

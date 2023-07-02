@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+        /*
+        var data = new Date()
+
+        //document.write(data.getDate() + '/' + data.getMonth() + '/' + data.getFullYear())
+        //23 / 11 / 2017
+
+        //adicionar / remover dias
+
+        document.write(data.toString())
+        data.setDate(data.getDate() + 720)
+
+        document.write('<hr />')
+        document.write(data.toString())
+        document.write('<br /><br /><hr />')
+
+        //adicionar / remover dias
+
+        document.write(data.toString())
+        data.setMonth(data.getMonth() -1)
+
+        document.write('<hr />')
+        document.write(data.toString())
+        document.write('<br /><br /><hr />')
+
+        //adicionar / remover anos
+
+        document.write(data.toString())
+        data.setFullYear(data.getFullYear() -1)
+
+        document.write('<hr />')
+        document.write(data.toString()) */
+
+        //26/09/2022
+        var data1 = new Date(2017, 0, 15)
+
+        //23/12/2022
+        var data2 = new Date(2017, 1 ,23)
+
+        document.write(data1.toString())
+        document.write('<hr />')
+        document.write(data2.toString())
+        document.write('<br /><br /><hr />')
+        //converter datas para algo que possamos calcular
+        document.write(data1.getTime())
+        document.write('<hr />')
+        document.write(data2.getTime())
+        document.write('<br /><br /><hr />')
+
+        //1 de janeiro de 1970
+
+        //encontrar a quantidade de milisegundos entre data1 e data2
+        var milissegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        document.write(milissegundos_entre_datas)
+
+        var millissegundos_por_dia = (1*24*60*60*1000)
+        document.write(' 1 dia tem: ' + millissegundos_por_dia + ' milissegundos')
+
+        document.write('<br /><br /><hr />')
+        document.write('A diferença entre data1 e data2 é de ' + Math.ceil(milissegundos_entre_datas / millissegundos_por_dia) + ' dias')
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

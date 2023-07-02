@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Soma e Subtrai simples com funções</title>
+    <script>
+
+        var num1 = prompt('Número 1:')
+        var num2 = prompt('Número 2:')
+        var operacao = prompt('Quer somar ou subtrair? ')   
+
+
+        function calculo(num1, num2, operacao){
+
+            var num1 = parseFloat(num1)
+            var num2 = parseFloat(num2)
+            var resultado = 0
+
+            if (operacao == 'Somar'){
+                var resultado = num1 + num2
+
+            }if (operacao == 'Subtrair'){
+                var resultado = num1 - num2
+
+            }
+
+            return resultado
+
+        }
+
+        document.write('O resultado é ' + calculo(num1, num2, operacao))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento input</title>
+
+    <style>
+        body{
+            background: #000000;
+        }
+    </style>
+
+    <script>
+        function comFoco(cor){
+            document.getElementById('Input').style.background = cor
+            
+        }
+
+        function semFoco(){
+            var caracteres = document.getElementById('Input').value
+            if (caracteres.length < 3){
+                document.getElementById('Input').style.background = "red"
+            } if (caracteres.length >= 3){
+                document.getElementById('Input').style.background = "green"
+                
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input id="Input" type="text" onfocus="comFoco('#fffa00')" onblur="semFoco()">
+</body>
+</html>

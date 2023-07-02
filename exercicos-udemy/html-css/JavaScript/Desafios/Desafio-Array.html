@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Desafio Array</title>
+
+    <script>
+        var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+        
+        function limpar(){
+            document.getElementById('Objeto').value = ''
+        }
+
+        function adicionarObjetos() {
+            // Recuperar valor contido no campo de texto
+            Objeto = document.getElementById('Objeto').value
+            // Verificar se o valor está vazio ou preenchido 
+            if (Objeto == ''){
+                alert('Informe um valor válido.')
+            } if (Objeto == objetos){
+                alert('Objeto já foi adicionado.')
+                
+            }else{
+                objetos += Objeto
+                console.log(objetos)
+            }
+        }
+
+        function ordenarObjetos() {
+            objetos.sort()
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="text" name="" id="Objeto">
+    <button onclick="adicionarObjetos()">Adicionar</button>
+    <button>Ordenar</button>
+    <button onclick="limpar()">Limpar</button>
+
+</body>
+</html>

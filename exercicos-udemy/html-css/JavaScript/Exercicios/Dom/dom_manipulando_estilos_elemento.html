@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaSript</title>
+
+    <script>
+        function modificaEstilo(corDeFundo, l ,a){
+            document.getElementById('div').style.backgroundColor = corDeFundo
+            document.getElementById('div').style.width = l
+            document.getElementById('div').style.height = a 
+
+        
+        }
+    </script>
+
+    <style>
+        div{
+            border: solid 1px ;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h3>Manipulando estilo</h3>
+
+    <button type="button" onclick="modificaEstilo('#FF0000', '200px')">Vermelho</button>
+    <button type="button" onclick="modificaEstilo('#00FF00', '150px', '20px')">Verde</button>
+    <button type="button" onclick="modificaEstilo('#0105FF', '50px', '500px')">Azul</button>
+    <hr>
+    <div id="div"></div>
+</body>
+</html>

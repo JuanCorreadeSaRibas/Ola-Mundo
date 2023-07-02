@@ -1,0 +1,3 @@
+onfocus = quando recebe o foco do mouse
+onblur = quando perde o foco
+onchange = quando o estado do elemento é modificado

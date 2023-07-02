@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    
+    <style>
+        h1{
+            font-family: sans-serif;
+        }
+    </style>
+
+    <script>
+
+        /* Operador &&
+
+        if(2 == 2 && 3 >= 1 && 'a' == 'b') {
+            document.write('Verdadeiro')
+        }
+
+        else{
+            document.write('false')
+        }
+
+        Operador ||
+
+        if (2 == 2 || 3 >= 8 || 'a' == 'b') {
+            document.write('verdadeiro')
+        }
+        else{
+            document.write('falso')
+        }      
+        
+        ! negação
+
+        if (!( 5 >= 1 )) {
+            document.write('verdadeiro')
+        }
+        else{
+            document.write('falso')
+        }
+
+        */
+
+        var nota = prompt('Digite a media do aluno: ')
+        var faltas = prompt('Digite a quantidade de faltas no ano:')
+
+        var media = 7 
+        var faltas_limite = 45
+/*
+        if (nota >= media && faltas <= faltas_limite){
+            document.write('<h1>Aprovado</h1>')
+        } else{
+            document.write('<h1>Reprovado</h1>')
+        }
+*/
+        var resultado = nota >= media && faltas <= faltas_limite ? '<h1>Aprovado</h1>' : '<h1>Reprovado</h1>'
+        document.write(resultado)
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

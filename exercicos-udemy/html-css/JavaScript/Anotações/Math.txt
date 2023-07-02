@@ -1,0 +1,22 @@
+//Math.ceil arredonda o número pra cima
+var x = Math.ceil(10.380)
+document.write(x)
+document.write('<hr />')
+//Math.floor arredonda
+var x = Math.floor(10.580)
+document.write(x)
+document.write('<hr />')
+
+//Math.round (Se o valor for até 4 arredonta pra baixo senão arredonda pra cima)
+var x = Math.round(10.580)
+document.write(x)
+document.write('<br />')
+var x = Math.round(10.250)
+document.write(x)
+document.write('<hr />')
+
+//Math.random números aleatorios
+x = Math.random()
+document.write(x)
+
+//Math.abs se o número for negativo a função deixa positivo
