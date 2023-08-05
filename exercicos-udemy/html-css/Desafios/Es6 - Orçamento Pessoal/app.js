@@ -21,7 +21,7 @@ class Despesa {
     }
 }
 
-class Bd {
+class Bd { //lida com os dados; funcões : identificar o ID, recuperar os registros, gravar e pesquisar
  
     constructor(){
         let id = localStorage.getItem('id')
@@ -61,7 +61,7 @@ class Bd {
             if(despesa === null){
                 continue 
             }
-
+            despesa.id = i
             despesas.push(despesa)
         }
         return despesas
@@ -108,8 +108,12 @@ class Bd {
             despesasFiltradas = despesasFiltradas.filter(d => d.valor == despesa.valor)
     }
 
-        console.log(despesasFiltradas)
+        return despesasFiltradas
 
+    }
+
+    remover(id){
+        localStorage.removeItem(id)
     }
 }
 
@@ -171,11 +175,20 @@ function cadastrarDespesa() {
 
 
 
-function carregaListaDespesas() {
-    let despesas = Array()
+function carregaListaDespesas(despesas = Array(), filtro = false) { //por default
 
-    despesas = bd.recuperarTodosRegistros()
+    if(despesas.length == 0 && filtro == false){
+        despesas = bd.recuperarTodosRegistros()   
+    } /*else{ Trabalhando nisso aqui
 
+        document.getElementById('modal_titulo_filtro').innerHTML = 'Erro na busca pela despesa'
+        document.getElementById('modal_titulo_filtro').className = 'modal-header text-danger'
+        document.getElementById('modal-descricao-filtro').innerText = 'Desculpe, mas a sua despesa não existe'
+        document.getElementById('botao-filtro').innerHTML = "Voltar"  
+        document.getElementById('botao-filtro').className = "btn btn-danger" 
+
+        $('#modalFiltro').modal('show')
+    } 
 
     
    /*
@@ -191,6 +204,7 @@ function carregaListaDespesas() {
  
     //selecionando o elemento tbody da tabela
     let listaDespesas = document.getElementById('listaDespesas')
+    listaDespesas.innerHTML = ''
      
     despesas.forEach(function(d){
 
@@ -220,7 +234,33 @@ function carregaListaDespesas() {
         linha.insertCell(2).innerHTML = d.descricao
         linha.insertCell(3).innerHTML = d.valor
         
+        //criar o botão de exclusão
 
+        let btn = document.createElement("button")
+        btn.className = 'btn btn-danger'
+        btn.innerHTML = ' <i class="fas fa-times"></i>'
+        btn.id = `id_despesa_${d.id}`
+        btn.onclick= function(){
+
+            document.getElementById('modal_titulo_remover').innerHTML = 'A despesa foi Excluída'
+            document.getElementById('modal_titulo_remover').className = 'modal-header text-success'
+            document.getElementById('modal-descricao-remover').innerText = 'A despesa foi removida com sucesso'
+            document.getElementById('botao-remover').innerHTML = "Voltar"  
+            document.getElementById('botao-remover').className = "btn btn-success" 
+    
+            $('#modalRemover').modal('show')
+
+
+            //remover a despesa
+            let id = this.id.replace('id_despesa_', '')
+            bd.remover(id)
+    
+            setTimeout(() => window.location.reload(), 2000)
+
+
+        }
+        linha.insertCell(4).append(btn)/*inclusão do btn na célula 4*/ 
+        console.log(d)
 
         
 
@@ -238,8 +278,15 @@ function pesquisarDespesa() {
     let descricao = document.getElementById('descricao').value
     let valor = document.getElementById('valor').value
 
+    listaDespesas.innerHTML = ''
+
     let despesa = new Despesa(dia,mes,dia,tipo,descricao,valor)
-    bd.pesquisar(despesa)
-    
+
+    let despesas = bd.pesquisar(despesa)
+
+
+    carregaListaDespesas(despesas, true)// Utlizar o forEach desse geito para poupar linhas e não escrever tudo denovo
+  
+      
 
 }
