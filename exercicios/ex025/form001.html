@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        body{
+            background-color: rgb(63, 39, 39);
+            color: cornsilk;
+        }
+        input{
+            border-start-end-radius: 5px;
+            border-end-start-radius: 5px;
+
+        }
+        input[type=text]:focus{
+            background-color: rgba(72, 154, 209, 0.856);
+            background-color: rgba(72, 154, 209, 0.733);
+            transition-duration: 1s;
+        }
+        input[type=submit]:active{
+            background-color: rgba(72, 154, 209, 0.856);
+            background-color: rgba(72, 154, 209, 0.733);
+
+            transition-duration: 0.5s;
+        }
+        input[type=submit]:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <form action="form001.php" autocomplete="off" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" class="nome">
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" id="sobrenome">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
