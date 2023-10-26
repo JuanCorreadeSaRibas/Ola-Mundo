@@ -1,10 +1,5 @@
 <?php
 
-    $nome = $_POST["nome"];
-    $sobrenome = $_POST["sobrenome"];
-
-    
-    echo $nome;
-    echo $sobrenome;
+    echo"dados enviados"
 ?>
-dados enviados
+dados enviados 
