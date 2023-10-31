@@ -1,0 +1,65 @@
+@charset "UTF-8";
+    *{
+        font-family:  Helvetica, sans-serif;
+
+    }
+    h1{
+        text-shadow: 2px 2px rgba(194, 84, 24, 0.183);
+        text-indent: 10px;
+    }
+    body{
+        background-color: rgb(63, 39, 39);
+        color: cornsilk;
+    }
+    div{
+        margin-inline-start: 10px;
+        padding: 5px;
+        width: 90vw;
+    }
+    input{
+        border-start-end-radius: 5px;
+        border-end-start-radius: 5px;
+
+    }
+    input[type=text]:focus{
+        background-color: rgba(72, 154, 209, 0.856);
+        background-color: rgba(72, 154, 209, 0.733);
+        transition-duration: 1s;
+    }
+    input[type=email]:focus{
+        background-color: rgba(209, 93, 72, 0.345);
+        transition-duration: 1s;
+    }
+    
+    input[type=submit]:active{
+        background-color: rgba(72, 154, 209, 0.856);
+        background-color: rgba(72, 154, 209, 0.733);
+
+        transition-duration: 0.5s;
+    }
+    input[type=submit]:hover{
+        cursor: pointer;
+    }
+    input::placeholder{
+        font-style: italic;
+        
+    }
+    fieldset{
+        background-color: rgba(32, 187, 218, 0.078);
+        border-radius: 3px 1px;
+        border-color: lightslategrey;
+        border-style: dotted;
+        width: 21vw;
+    }
+    fieldset:hover{
+        border-color: rgb(0, 139, 95);
+        border-style: double;
+        animation-delay: 0.5s;
+        transition: 1.7s;
+    }
+    fieldset legend{
+        font-weight: bold;
+        padding: 3px;
+        text-shadow: 3px 2.2px rgba(0, 0, 0, 0.306);
+    }
+    
