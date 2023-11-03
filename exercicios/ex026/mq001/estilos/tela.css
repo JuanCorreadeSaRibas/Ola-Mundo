@@ -22,10 +22,11 @@ menu li{
     display: inline-block;
     background-color: darkgrey;
     padding: 10px;
+    margin-left: 15px;
 }
 
 menu ul {
-
+    margin: auto; 
     list-style-type: none;
     background-color: gray;
 
