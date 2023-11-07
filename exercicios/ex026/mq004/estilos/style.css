@@ -2,6 +2,8 @@
 
 /* Versão Mobile First */
 
+
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3em;
@@ -11,7 +13,7 @@
 }
 
 html {
-
+    
     height: 100vh;
 }
 
@@ -37,12 +39,22 @@ h1{
 }
 
 img{
-    display: block;
+    display: none;
     margin: auto;
 }
 
-img#phone { display: block;}
-img#tablet { display: none;}
-img#print { display: none;}
-img#tv { display: none;}
-img#pc { display: none;}
+img#phone { 
+    display: block;
+}
+img#tablet {
+    display: none;
+}
+img#print {
+    display: none;
+}
+img#tv { 
+    display: none;
+}
+img#pc { 
+    display: none;
+}
