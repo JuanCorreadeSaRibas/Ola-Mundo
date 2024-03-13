@@ -6,28 +6,46 @@
 
     <title>JQuery</title>
 
+    <link rel="stylesheet" href="../pasta_estilos/estilo_pasta_rma.css">
     <!--<script src="jquery-3.7.1.min.js"></script>-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
 
         $(document).ready(() =>{
             //logica 
-            
+
+            //For nativo do React.js 
+            /*
+            $.each($('.interesse:checked'), (indice, valor) => {
+                    console.log(indice, valor)
+            })
+
+            */
         })
-        
     </script>
 </head>
 <body style="box-sizing: border-box;">
 
-    <p> Nome: </p>
+    <label for="nome"> Nome: </label>
     <input type="text" name="" id="nome">
     <br>
-    <p>Onde você nos encontros?</p>
-    <select name="" id="origem">
+    <label for="origem">Onde você nos encontros?</label>
+    <select name="origem" id="origem">
         <option value="1">Google</option>
         <option value="2">Facebook</option>
         <option value="3">Rádio</option>
         <option value="4">Outros meios</option>
     </select>
+    <br>
+    <label for="sexo">Sexo:</label><br>
+    <input type="radio" name="sexo" class="sexo" value="F">Feminino <br>
+    <input type="radio" name="sexo" class="sexo" value="M" checked>Masculino <br>
+    <br>
+
+    <label for="inter">Interesses: </label><br>
+    <input type="checkbox" name="Interesse" id="" class="interesse" value="php"> PHP<br>
+    <input type="checkbox" name="Interesse" id="" class="interesse" value="js"> JavaScript<br>
+    <input type="checkbox" name="Interesse" id="" class="interesse" value="angular"> Angular<br>
+    <input type="checkbox" name="Interesse" id="" class="interesse" value="nodejs"> NodeJS<br>
 </body>
 </html>
