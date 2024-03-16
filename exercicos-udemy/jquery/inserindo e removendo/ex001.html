@@ -13,10 +13,32 @@
 
         $(document).ready(() =>{
 
+            //prepend adiciona antes de tudo dentro do elemento selecionado
+            //append adiciona depois de tudo dentro do elemento selecionado
+            //before adiciona fora do elemtento selecionado em cima
+            //after adiciona fora do elemtento selecionado em baixo
+
+            $('.item2').remove()
+            $('#linha').after('<p>Eu fui inserido após a div</p>')
         })
     </script>
 </head>
 <body style="box-sizing: border-box;">
+
+    <ul id="lista1">
+        <li>Item 1</li>
+        <li class="item2">Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+
+    <div id="lista2">
+        <div>Item 1</div>
+        <div class="item2">Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <hr id="linha">
 
 
 </body>
