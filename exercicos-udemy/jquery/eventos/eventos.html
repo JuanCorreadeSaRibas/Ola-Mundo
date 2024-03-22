@@ -65,8 +65,27 @@
 					console.log('Div Interna (saiu)')
 				})
 
+				$('#teclado').keydown((e) => {
+					if(e.keyCode < 97 || e.keyCode > 100){
+						let txt = $(e.target).val()
+						txt = txt.slice(0, -1)
 
+						$(e.target).val(txt)
+					}
+				})
+
+			/*	$('#teclado').keyup((e) => {
+					$('#rtecla').html('Tecla liberada')
+					
+					if(e.keyCode == 13){
+						let txt = $(e.target).val()
+						$('#rtecla').html(txt)
+						$(e.target).val('')
+					}
+				})
+			*/
 			})
+
 		</script>
 	</head>
 
@@ -103,8 +122,8 @@
 			<div>
 				<h3>Teclado</h3>
 				<span>Nome:</span>
-				<input type="text" />
-				<span>Resultado do evento sobre o input</span>
+				<input type="text" id="teclado">
+				<span id="rtecla">Resultado do evento sobre o input</span>
 			</div>
 			<hr />
 
