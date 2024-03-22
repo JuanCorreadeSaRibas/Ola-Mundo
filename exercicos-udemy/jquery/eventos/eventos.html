@@ -4,11 +4,21 @@
 		<meta charset="UTF-8">
 		<title>jQuery</title>
 
-		<style>
-			
-		</style>
-
+		<link rel="stylesheet" href="../pasta_estilos/estilo_pasta_rma.css">
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<style>
+			#divex{
+				background-color: #ccc;
+				width: 80px;
+				height: 80px;
+				padding: 70px;
+			}
+			#divInter{
+				background-color: rgb(106, 106, 206);
+				height: 80px;
+				width: 80px;
+			}
+		</style>                        
 		<script>
 			$(document).ready(() =>{
 				$('#onload').html('Página carregada')
@@ -20,6 +30,42 @@
 				$(window).resize(() => {
 					$('#window').html('Página redimisionada').css({'background-color': 'red', 'color': 'white', 'font-family': 'Arial, Helvetica'})
 				})
+
+				$('#btn1').mousedown(() => {
+					$('#div2').css('background-color', 'green')
+				})
+
+				$('#btn1').mouseup(() =>{
+					$('#div2').css({'background-color': 'blue'})
+				})
+
+				$('#btn2').dblclick(() => {
+					$('#div2').css({'background-color' : 'red'})
+				})
+
+				$('#div2').mousemove((e) => {
+					console.log(e.offsetX, e.offsetY)
+					$('#resultadoD').html('X: ' + e.offsetX + ' / Y: ' + e.offsetY)
+				})
+
+				$('#divex').mouseenter(() => {
+					$('#resultDiv1').html('entrou')
+					console.log('Div Externa (entrou)')
+				})
+				$('#divex').mouseleave(() => {
+					$('#resultDiv1').html('saiu')
+					console.log('Div Externa (saiu)')
+				})
+				$('#divInter').mouseenter(() => {
+					$('#resultDiv2').html('entrou')
+					console.log('Div Interna (entrou)')
+				})
+				$('#divInter').mouseleave(() => {
+					$('#resultDiv2').html('saiu')
+					console.log('Div Interna (saiu)')
+				})
+
+
 			})
 		</script>
 	</head>
@@ -31,42 +77,54 @@
 		</div>
 
 		<div>
-			<h3>Browser</h3>
-			<span>Onload: </span><span id="onload">?</span><br />
-			<span>Scroll: </span><span id="scroll">?</span><br />
-			<span>Window: </span><span id="window">?</span>
+			<div>
+				<h3>Browser</h3>
+				<span>Onload: </span><span id="onload">?</span><br />
+				<span>Scroll: </span><span id="scroll">?</span><br />
+				<span>Window: </span><span id="window">?</span>
+			</div>
 			<hr />
 
-			<h3>Mouse</h3>
-			<button type="button">Clique aqui</button>
-			<button type="button">Clique aqui 2x</button>
-			<div style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
-			<span>Resultado do evento sobre a div</span>
+			<div>
+				<h3>Mouse</h3>
+				<button type="button" id="btn1">Clique aqui</button>
+				<button type="button" id="btn2">Clique aqui 2x</button>
+				<div id="div2" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
+				<span>Resultado do evento sobre a div </span><span id="resultadoD"></span>
+
+				<div id="divex">
+					<div id="divInter"></div>
+				</div>
+				<span>Div Externa: </span><span id="resultDiv1"></span>
+				<span>Div Interna: </span><span id="resultDiv2"></span>
+			</div>
 			<hr />
 
-			<h3>Teclado</h3>
-			<span>Nome:</span>
-			<input type="text" />
-			<span>Resultado do evento sobre o input</span>
-			<hr />
-
-			<h3>Formulário</h3>
-			<form>
+			<div>
+				<h3>Teclado</h3>
 				<span>Nome:</span>
 				<input type="text" />
+				<span>Resultado do evento sobre o input</span>
+			</div>
+			<hr />
 
-				<span>E-mail:</span>
-				<input type="text" />
-
-				<span>Motivo do contato:</span>
-				<select>
-					<option value="">-- Selecione --</option>
-					<option value="duvida">Dúvida</option>
-					<option value="sugestao">Sugestão</option>
-				</select>
+			<div>
+				<h3>Formulário</h3>
+				<form>
+					<span>Nome:</span>
+					<input type="text" />
+					<span>E-mail:</span>
+					<input type="text" />
+					<span>Motivo do contato:</span>
+					<select>
+						<option value="">-- Selecione --</option>
+						<option value="duvida">Dúvida</option>
+						<option value="sugestao">Sugestão</option>
+					</select>
 				
-				<button type="button">Enviar</button>
-			</form>
+					<button type="button">Enviar</button>
+				</form>
+			</div>
 		</div>
 	</body>
 
