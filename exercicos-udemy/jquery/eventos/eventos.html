@@ -18,6 +18,10 @@
 				height: 80px;
 				width: 80px;
 			}
+
+			.inputFocado{
+				background-color: rgba(220, 202, 114, 0.932);
+			}
 		</style>                        
 		<script>
 			$(document).ready(() =>{
@@ -65,7 +69,7 @@
 					console.log('Div Interna (saiu)')
 				})
 
-				$('#teclado').keydown((e) => {
+				$('#teclado').keyup((e) => {
 					if(e.keyCode < 97 || e.keyCode > 100){
 						let txt = $(e.target).val()
 						txt = txt.slice(0, -1)
@@ -84,6 +88,33 @@
 					}
 				})
 			*/
+
+				$('#nome, #email').focus((e) =>{
+					console.log('Esse elemento HTML recebeu o foco (nome)')
+					$(e.target).addClass('inputFocado')
+				})
+
+				
+				
+				$('#email, #nome').blur((e) =>{
+					console.log('Esse elemento HTML perdeu o foco (email)')
+					$(e.target).removeClass('inputFocado')
+					
+				})
+
+				$('#opcao').change((e) =>{
+					console.log($(e.target).val())
+					
+				})
+
+				$('form').submit((e) =>{
+					e.preventDefault()
+					console.log('Formulário enviado')
+				})
+
+				$('a').click((e) => {
+					e.preventDefault()
+				})
 			})
 
 		</script>
@@ -131,19 +162,22 @@
 				<h3>Formulário</h3>
 				<form>
 					<span>Nome:</span>
-					<input type="text" />
+					<input type="text"  id="nome">
 					<span>E-mail:</span>
-					<input type="text" />
+					<input type="text" id="email">
 					<span>Motivo do contato:</span>
-					<select>
+					<select id="opcao">
 						<option value="">-- Selecione --</option>
 						<option value="duvida">Dúvida</option>
 						<option value="sugestao">Sugestão</option>
 					</select>
 				
-					<button type="button">Enviar</button>
+					<button type="submit">Enviar</button>
 				</form>
 			</div>
+
+			<h2>Link do Google</h2>
+			<a href="https://www.google.com.br">Google</a>
 		</div>
 	</body>
 
