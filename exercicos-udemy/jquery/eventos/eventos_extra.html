@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Extra</title>
+
+    <link rel="stylesheet" href="../pasta_estilos/estilo_pasta_rma.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <style>
+        #div1{
+            width: 40px;
+            height: 80px;
+            background-color: black;
+        }
+    </style>
+
+    <script>
+        $(document).ready(() => {
+            $('#btn2').on('click', () => {
+                alert('BTN 2 clicado');
+            })
+
+            $('#btn1').on('click', () => {
+                $('#btn2').trigger('click');
+            })
+        })
+    </script>
+</head>
+<body>
+
+    <button id="btn1" type="button">BTN 1</button>
+    <button id="btn2" type="button">BTN 2</button>
+    <button id="btn3" type="button">BTN 3</button>
+
+    <hr>
+
+    <div id="div1">
+        
+    </div>
+
+</body>
+</html>
