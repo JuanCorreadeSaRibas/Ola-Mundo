@@ -10,9 +10,13 @@
 
     <style>
         #div1{
-            width: 40px;
+            width: 80px;
             height: 80px;
-            background-color: black;
+            border: 1px solid darkgrey;
+        }
+
+        .Destaque{
+            background-color: rgb(103, 42, 159);
         }
     </style>
 
@@ -25,6 +29,13 @@
             $('#btn1').on('click', () => {
                 $('#btn2').trigger('click');
             })
+
+            $('#div1').hover(
+                //mouseenter
+                //mouseleave
+                e => $(e.target).toggleClass('Destaque')
+            )
+
         })
     </script>
 </head>
