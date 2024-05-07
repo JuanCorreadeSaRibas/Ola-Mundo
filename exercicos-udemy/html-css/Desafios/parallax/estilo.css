@@ -8,6 +8,19 @@
             color: #777;
             height: 100vh;
         }
+        body::-webkit-scrollbar {
+            width: 12px;               /* width of the entire scrollbar */
+          }
+          
+        body::-webkit-scrollbar-track {
+            background: rgb(205, 198, 187);        /* color of the tracking area */
+        }
+          
+        body::-webkit-scrollbar-thumb {
+              /* color of the scroll thumb */
+            border-radius: 20px;       /* roundness of the scroll thumb */
+            border: 5px solid rgb(81, 69, 47);  /* creates padding around scroll thumb */
+        }
         .conteudo {
             color: #777;
             background-color: white;
